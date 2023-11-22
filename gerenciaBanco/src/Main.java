@@ -1,7 +1,7 @@
 /*
-By:      @cvinicius369
-E-mail:  vinicius182102@gmail.com
-Project: Gerenciamento de Conta Bancária
+By:...........................@cvinicius369
+E-mail:............vinicius182102@gmail.com
+Project:....Gerenciamento de Conta Bancária
 */
 
 /*Abaixo realizei as importações que podem ser necessárias no código,
