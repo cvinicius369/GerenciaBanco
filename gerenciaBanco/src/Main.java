@@ -14,31 +14,21 @@ saque, deposito ou tirar o saldo.*/
 class ContaBancaria {
     /*Abaixo estão as variaveis onde consta o numero da conta do usuario e o saldo atual
     no metodo ContaBancaria() deixei pré-definido o saldo.*/
-    private int numeroConta, idade;
+    private int    numeroConta, idade;
     private double saldo;
     private String nome;
     public ContaBancaria(int numeroConta) {
+        
         this.numeroConta = numeroConta;
-        this.saldo = 150.0;
-        this.nome = "Caio Vinicius de A. Faguette";
-        this.idade = 20;
+        this.saldo =       150.0;
+        this.nome  =       "Caio Vinicius de A. Faguette";
+        this.idade =       20;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public int getNumeroConta() {
-        return numeroConta;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
+    public String getNome() { return nome;}
+    public int getIdade() { return idade; }
+    public int getNumeroConta() {return numeroConta;}
+    public double getSaldo() {return saldo;}
 
     public void depositar(double valor) {
         if (valor > 0) {
