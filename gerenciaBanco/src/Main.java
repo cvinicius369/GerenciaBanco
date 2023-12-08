@@ -44,8 +44,10 @@ class ContaBancaria {
         if (valor > 0) {
             saldo += valor;
             System.out.println("Depósito de $" + valor + " realizado com sucesso.");
+            Main.main();
         } else {
             System.out.println("Valor de depósito inválido.");
+            Main.main();
         }
     }
 
@@ -53,8 +55,10 @@ class ContaBancaria {
         if (valor > 0 && saldo >= valor) {
             saldo -= valor;
             System.out.println("Saque de $" + valor + " realizado com sucesso.");
+            Main.main();
         } else {
             System.out.println("Valor de saque inválido ou saldo insuficiente.");
+            Main.main();
         }
     }
 }
@@ -75,20 +79,26 @@ public class Main{
         System.out.println("Idade do titular: " + caio.getIdade());
         System.out.println("Sua conta é: " + caio.getNumeroConta());
         System.out.println("Seu saldo é de: " + caio.getSaldo());
-        System.out.println("Digite 1 para sacar ou 2 para depositar");
+        System.out.println("Digite 1 para sacar, 2 para depositar ou 3 para mais opcoes.");
         int action = scanner.nextInt();
 
         if (action == 1) {
-
-            System.out.println("Informe o valor do saque");
-            float valor = scanner.nextFloat();
-
-            caio.sacar(valor);
+            System.out.println("Informe o valor do saque"); float valor = scanner.nextFloat(); caio.sacar(valor);
         } else if (action == 2) {
-            System.out.println("Informe o valor do deposito");
-            float valor = scanner.nextFloat();
+            System.out.println("Informe o valor do deposito"); float valor = scanner.nextFloat(); caio.depositar(valor);
+        } else if (action == 3) {
+            System.out.println("Segue as opcoes \n[1] Investimento em CDB \n[2] Investimento em acoes \n[3] Investimento em Poupanca \n[4] Voltar ao Menu");
+            float action2 = scanner.nextInt();
 
-            caio.depositar(valor);
+            if (action2 == 1){
+                //Bloco de investimentos em CDB
+            } else if (action2 == 2) {
+                //Bloco de investimentos em Ações
+            } else if (action2 == 3) {
+                //Bloco de investimentos em Poupança
+            } else if (action2 == 4) {
+                Main.main();
+            } else { System.out.println("Ação invalida!"); }
         } else {
             System.out.println("Ação invalida!");
         }
